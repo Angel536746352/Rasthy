@@ -1,0 +1,133 @@
+
+
+
+
+<body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes con texto</title>
+    <link rel="stylesheet" href="animacion.css">
+    
+    
+    
+</head>
+
+<body>
+  <nav class="menu">
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="imagentexto.html">Tienda</a></li>
+        <li><a href="ventas.html">Historial de compras</a></li>
+        <li><a href="perfil2.html">Perfil</a></li>
+    </ul>
+</nav>
+</body>
+<body>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        height: 60vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item textarea {
+        width: 100%;
+        border: none;
+        border-top: 1px solid #ddd;
+        padding: 10px;
+        box-sizing: border-box;
+        resize: none;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+        outline: none;
+    }
+
+    .gallery-item textarea:focus {
+        border-color: #007bff;
+    }
+</style>
+</head>
+<body>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="c:\Users\angel\OneDrive\Imágenes\casmisa 3.avif" alt="Imagen 1">
+        <center><p>pulsera </p></center>
+    </div>
+    <div class="gallery-item">
+        <img src="c:\Users\angel\OneDrive\Imágenes\cumpleaños1.jpg   " alt="Imagen 2">
+        <center><p>Aretes</p></center>
+    </div>
+    <div class="gallery-item">
+        <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+        <center><p>Collares</p></center>
+        
+    </div>
+    <div class="gallery-item">
+      <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+      <center><p>Collares</p></center>
+      
+  </div>
+  <div class="gallery-item">
+    <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+    <center><p>Collares</p></center>
+    
+</div>
+<div class="gallery-item">
+  <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+  <center><p>Collares</p></center>
+  
+</div>
+<div class="gallery-item">
+  <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+  <center><p>Collares</p></center>
+  
+</div>
+<div class="gallery-item">
+  <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+  <center><p>Collares</p></center>
+  
+</div>
+<div class="gallery-item">
+  <img src="c:\Users\angel\OneDrive\Imágenes\OIP (1).jpeg" alt="Imagen 3">
+  <center><p>Collares</p></center>
+  
+</div>
+    <!-- Añade más elementos de galería aquí -->
+</div>
+</body>
+</html>

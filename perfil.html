@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+   
+
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #131212;
+            color: white;
+            padding: 2px;
+            text-align: center;
+            position: relative;
+        }
+        .header .time {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .profile h2 {
+            margin: 10px 0;
+        }
+        .menu {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu li {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu li:hover {
+            background-color: #f9f9f9;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            flex-grow: 1;
+        }
+        .menu li .arrow {
+            font-size: 18px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <h1>Perfil</h1>
+        <div class="time">12:30</div>
+    </div>
+    <div class="profile">
+        
+        <center>
+        <img id="profile-img" src="c:\Users\angel\OneDrive\Imágenes\bandera.jpg" alt="Imagen de Perfil"></center>
+        <input type="file" id="file-input" accept="image/*">
+        <button id="upload-btn">Cambiar Imagen</button>
+        <script>
+            document.getElementById('upload-btn').addEventListener('click', function() {
+                const fileInput = document.getElementById('file-input');
+                const profileImg = document.getElementById('profile-img');
+    
+                if (fileInput.files && fileInput.files[0]) {
+                    const reader = new FileReader();
+                    
+                    reader.onload = function(e) {
+                        profileImg.src = e.target.result;
+                    }
+                    
+                    reader.readAsDataURL(fileInput.files[0]);
+                } else {
+                    alert('Por favor selecciona una imagen.');
+                }
+            });
+        </script>
+        <h2>Angel</h2>
+    </div>
+    <ul class="menu">
+        <li><a href="index.html">Información Personal</a><span class="arrow">></span></li>
+        <li><a href="#">Dirección de Retorno</a><span class="arrow">></span></li>
+        <li><a href="#">Cambiar Dirección de Correo</a><span class="arrow">></span></li>
+        <li><a href="#">ayuda</a><span class="arrow">></span></li>
+    </ul>
+    
+        <style>
+            .back-button {
+                background-color: #0b0c0b; /* Color verde */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+            .back-button:hover {
+                background-color: #0a0a0a; /* Color verde más oscuro al pasar el ratón */
+            }
+        </style>
+         <style>
+        .back-button {
+            background-color: #33acf3; /* Color verde */
+            border: none;
+            color: white;
+            padding: 11px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 3px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .back-button:hover {
+            background-color: #0a0a0a; /* Color verde más oscuro al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="goBack()">Volver</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    </head>
+    
+    
+    
+</body>
+</html>

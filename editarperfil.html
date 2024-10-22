@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Personal</title>
+    <link rel="stylesheet" href="estiloeditarperfil.css">
+    <link rel="stylesheet" href="animacion.css">
+</head>
+<body>
+    
+    <div class="perfil-container">
+        <div class="perfil-foto-container">
+            <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="perfil-foto" id="fotoPerfil">
+            <input type="file" id="fotoInput" class="perfil-foto-input" accept="image/*" disabled>
+        </div>
+
+        <div class="perfil-info">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" readonly>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="juan.perez@example.com" readonly>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+123 456 7890" readonly>
+
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad de México, México" readonly>
+
+            <button id="editarPerfil">Editar Perfil</button>
+            <button id="guardarPerfil" style="display: none;">Guardar Perfil</button>
+        </div>
+    </div>
+
+    <script src="cambiarperfil.js"></script>
+</body>
+</html>

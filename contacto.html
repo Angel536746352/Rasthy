@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #25D366;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1eb857;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contáctenos</h1>
+        <form id="contact-form" onsubmit="return false;">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+
+            <label for="consulta">Consulta</label>
+            <textarea id="consulta" rows="5" placeholder="Escribe tu consulta aquí"></textarea>
+
+            <button type="submit" onclick="enviarMensaje()">Enviar por WhatsApp</button>
+        </form>
+    </div>
+
+    <script>
+    function enviarMensaje() {
+        // Obtener los valores del formulario
+        const nombre = document.getElementById('nombre').value.trim();
+        const consulta = document.getElementById('consulta').value.trim();
+
+        // Validar que los campos no estén vacíos
+        if (!nombre) {
+            alert('Por favor, ingresa tu nombre.');
+            return;
+        }
+
+        if (!consulta) {
+            alert('Por favor, ingresa tu consulta.');
+            return;
+        }
+
+        // Crear el mensaje para WhatsApp
+        const mensaje = `Hola, mi nombre es ${nombre}. Tengo la siguiente consulta: ${consulta}.`;
+
+        // Número de teléfono del receptor (vendedor, soporte, etc.), con código internacional incluido
+        const telefono = '50497879281'; // Reemplaza esto con el número del destinatario
+
+        // URL de WhatsApp con el mensaje codificado
+        const whatsappUrl = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+        // Redirigir a WhatsApp
+        window.open(whatsappUrl, '_blank');
+    }
+    </script>
+</body>
+</html>
